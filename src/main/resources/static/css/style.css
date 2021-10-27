@@ -1,0 +1,68 @@
+.pit-small {
+    height: 150px;
+    width: 150px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+
+}
+
+.pit-large {
+    height: 300px;
+    width: 300px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+
+    font-weight: bold;
+
+}
+#container{
+
+    margin-top: 200px;
+
+}
+
+.player-info{
+    margin-top: 20px;
+    font-size: larger;
+    text-align: center;
+    font-family: "Trebuchet MS",serif;
+}
+
+.make-a-move{
+    margin-left: 50px;
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: cornflowerblue;
+    text-decoration: none;
+    font-family: "Trebuchet MS",serif;
+
+}
+
+#start-game{
+    text-align: center;
+    font-size: 25px;
+    font-family: "Trebuchet MS",serif;
+
+}
+
+#game-info-message-container{
+
+    text-align: center;
+    font-size: 25px;
+    font-family: "Trebuchet MS",serif;
+    color: red;
+}
+
+#start-game-container{
+    text-align: center;
+}

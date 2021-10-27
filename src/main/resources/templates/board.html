@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <script type="text/javascript" src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+
+<div id="container">
+
+    <div class="player-info">
+        <h4 id="player2-info">Player2 Info</h4>
+    </div>
+
+    <div id="board">
+
+        <table style="width:100%">
+            <tr>
+                <td rowspan="2">
+                    <span id="pit-13" class="pit-large"></span>
+                    <br/>
+                </td>
+                <td>
+                    <button id="make-a-move-12" class="make-a-move" onclick="makeAMove(12);">Play</button>
+                    <span id="pit-12" class="pit-small"></span>
+                    <br/>
+                </td>
+                <td>
+                    <button id="make-a-move-11" class="make-a-move" onclick="makeAMove(11);" >Play</button>
+                    <span id="pit-11" class="pit-small"></span>
+                    <br/>
+                </td>
+                <td>
+                    <button id="make-a-move-10" class="make-a-move" onclick="makeAMove(10);" >Play</button>
+                    <span id="pit-10" class="pit-small"></span>
+                    <br/>
+                </td>
+                <td>
+                    <button id="make-a-move-9" class="make-a-move" onclick="makeAMove(9);" >Play</button>
+                    <span id="pit-9" class="pit-small"></span>
+                    <br/>
+                </td>
+                <td>
+                    <button id="make-a-move-8" class="make-a-move" onclick="makeAMove(8);" >Play</button>
+                    <span id="pit-8" class="pit-small"></span>
+                    <br/>
+                </td>
+                <td>
+                    <button id="make-a-move-7" class="make-a-move" onclick="makeAMove(7);" >Play</button>
+                    <span id="pit-7" class="pit-small"></span>
+                    <br/>
+                </td>
+                <td rowspan="2"><span id="pit-6" class="pit-large"></span>
+
+                    <br/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="pit-0" class="pit-small"></span>
+                    <button id="make-a-move-0" class="make-a-move" onclick="makeAMove(0);" >Play</button> <br/>
+                    <br/>
+                </td>
+                <td>
+                    <span id="pit-1" class="pit-small"></span>
+                    <button id="make-a-move-1" class="make-a-move" onclick="makeAMove(1);" >Play</button>
+                    <br/>
+                </td>
+                <td>
+                    <span id="pit-2" class="pit-small" ></span>
+                    <button id="make-a-move-2" class="make-a-move"  onclick="makeAMove(2);" >Play</button>
+                    <br/>
+                </td>
+                <td><span id="pit-3" class="pit-small"></span>
+                    <button id="make-a-move-3" class="make-a-move" onclick="makeAMove(3);" >Play</button>
+                    <br/>
+                </td>
+                <td>
+                    <span id="pit-4" class="pit-small"></span>
+                    <button id="make-a-move-4" class="make-a-move" onclick="makeAMove(4);" >Play</button>
+                    <br/>
+                </td>
+                <td>
+                    <span id="pit-5" class="pit-small"></span>
+                    <button id="make-a-move-5" class="make-a-move" onclick="makeAMove(5);" >Play</button>
+                    <br/>
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="player-info">
+        <h4 id="player1-info">Player1 Info</h4>
+    </div>
+
+    <div id="game-info-message-container">
+        <h4 id="game-info-message">Game Info Message</h4>
+    </div>
+
+
+    <div id="start-game-container">
+        <button id="start-game" onclick="startGame();">Start The Game</button>
+    </div>
+
+
+</div>
+</body>
+</html>
