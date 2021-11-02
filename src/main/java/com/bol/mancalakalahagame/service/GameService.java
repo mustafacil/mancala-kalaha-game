@@ -1,8 +1,11 @@
 package com.bol.mancalakalahagame.service;
 
 import com.bol.mancalakalahagame.model.domain.Game;
+import com.bol.mancalakalahagame.model.domain.Player;
 import com.bol.mancalakalahagame.model.enums.GameState;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Class for {@link Game} related actions
@@ -28,6 +31,18 @@ public class GameService {
         game.setGameState(GameState.WAITING_FOR_NEXT_PLAYER);
         //change next player.
         game.setNextPlayerIndex(index);
+
+    }
+
+    public boolean checkTurn(Game game, int selectedSmallPitIndex){
+
+        int indexOfPlayerBySmallPit = game.getIndexOfPlayerBySmallPitIndex(selectedSmallPitIndex);
+
+        if(game.getNextPlayerIndex() == indexOfPlayerBySmallPit){
+            return true;
+        }
+
+        return false;
 
     }
 

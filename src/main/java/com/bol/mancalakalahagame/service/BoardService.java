@@ -49,22 +49,6 @@ public class BoardService {
 
     }
 
-    /**
-     * Function to create unique id of current {@link Board}
-     * @param board the current {@link Board}
-     * @return unique id of current {@link Board}
-     */
-    public String createBoardId(Board board) {
-        //create unique id of board with usernames of players and current date
-        Game game = board.getGame();
-        List<Player> playerList = game.getPlayerList();
-        String usernameOfFirstPlayer = playerList.get(0).getUsername();
-        String usernameOfSecondPlayer = playerList.get(1).getUsername();
-
-        String currentDate = new SimpleDateFormat("ddMMyyyyHHmmss").format(new Date());
-
-        return usernameOfFirstPlayer + usernameOfSecondPlayer + currentDate;
-    }
 
     /**
      * Function to create a new {@link Board}
@@ -79,8 +63,7 @@ public class BoardService {
 
         Game game = new Game(playerList, 0, GameState.WAITING_FOR_NEXT_PLAYER);
         Board board = new Board(pitArray, game);
-        String hashKeyOfBoard = createBoardId(board);
-        board.setId(hashKeyOfBoard);
+        board.setId();
         boardRepository.saveBoard(board);
         return board;
     }

@@ -139,7 +139,6 @@ class BoardTest {
     void setGameState() {
 
         board.setGameState(GameState.FINISHED);
-
         assertEquals(GameState.FINISHED, board.getGameState());
     }
 

@@ -4,7 +4,10 @@ import com.bol.mancalakalahagame.model.enums.GameState;
 import com.bol.mancalakalahagame.model.enums.PitType;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -46,11 +49,19 @@ public class Board {
     }
 
     /**
-     *
-     * @param id to set
+     * create unique board id
      */
-    public void setId(String id) {
-        this.id = id;
+    public void setId() {
+
+        //create unique id of board with usernames of players and current date
+        List<Player> playerList = game.getPlayerList();
+        String usernameOfFirstPlayer = playerList.get(0).getUsername();
+        String usernameOfSecondPlayer = playerList.get(1).getUsername();
+
+        String currentDate = new SimpleDateFormat("ddMMyyyyHHmmss").format(new Date());
+
+        String uniqueId = usernameOfFirstPlayer + usernameOfSecondPlayer + currentDate;
+        this.id = uniqueId;
     }
 
     /**
