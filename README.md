@@ -1,5 +1,3 @@
-# Mustafa Cil
-
 ### **mancala-kalaha-game**
 
 #### **How to Run**
